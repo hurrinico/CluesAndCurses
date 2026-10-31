@@ -1,0 +1,330 @@
+{
+  "_info": "Manifest di clean_assets.py. 'file' = nome in input_dir (rinomina i download di Gemini cosi'). Ritratti con lo stesso 'group' = stessa scala. Opzionali: scale, offset [dx,dy], dither, nine_slice, skip. 'avoid': colori di palette da non usare per quel file (sostituisce avoid_by_mode).",
+  "input_dir": "raw",
+  "output_dir": "out",
+  "palette": "CluesAndCurses.hex",
+  "assets": [
+    {
+      "id": "R01_alaric_neutro",
+      "file": "R01_alaric_neutro.jpeg",
+      "mode": "portrait",
+      "group": "alaric",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R02_alaric_concentrato",
+      "file": "R02_alaric_concentrato.jpeg",
+      "mode": "portrait",
+      "group": "alaric",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R03_alaric_accusa",
+      "file": "R03_alaric_accusa.jpeg",
+      "mode": "portrait",
+      "group": "alaric",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R04_garrett_neutro",
+      "file": "R04_garrett_neutro.jpeg",
+      "mode": "portrait",
+      "group": "garrett",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R05_garrett_nervoso",
+      "file": "R05_garrett_nervoso.jpeg",
+      "mode": "portrait",
+      "group": "garrett",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R06_garrett_colpito",
+      "file": "R06_garrett_colpito.jpeg",
+      "mode": "portrait",
+      "group": "garrett",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R07_garrett_arreso",
+      "file": "R07_garrett_arreso.jpeg",
+      "mode": "portrait",
+      "group": "garrett",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R08_lyra_neutra",
+      "file": "R08_lyra_neutra.jpeg",
+      "mode": "portrait",
+      "group": "lyra",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R09_lyra_sdegnata",
+      "file": "R09_lyra_sdegnata.jpeg",
+      "mode": "portrait",
+      "group": "lyra",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R10_lyra_colpita",
+      "file": "R10_lyra_colpita.jpeg",
+      "mode": "portrait",
+      "group": "lyra",
+      "subdir": "portraits"
+    },
+    {
+      "id": "R11_lyra_arresa",
+      "file": "R11_lyra_arresa.jpeg",
+      "mode": "portrait",
+      "group": "lyra",
+      "subdir": "portraits",
+      "_note": "pelle scura, fuori modello come i vecchi R8/R10: da rigenerare"
+    },
+    {
+      "id": "R12_kaelen_spaventato",
+      "file": "R12_kaelen_spaventato.jpeg",
+      "mode": "portrait",
+      "group": "kaelen",
+      "subdir": "portraits",
+      "avoid": []
+    },
+    {
+      "id": "R12b_kaelen_spaventato_variante",
+      "file": "R12b_kaelen_spaventato_variante.jpeg",
+      "mode": "portrait",
+      "group": "kaelen",
+      "subdir": "portraits",
+      "_note": "variante: tenere una delle due",
+      "avoid": []
+    },
+    {
+      "id": "R13_kaelen_sollevato",
+      "file": "R13_kaelen_sollevato.jpeg",
+      "mode": "portrait",
+      "group": "kaelen",
+      "subdir": "portraits",
+      "avoid": []
+    },
+    {
+      "id": "R14_aldous",
+      "file": "R14_aldous.jpeg",
+      "mode": "portrait",
+      "group": "aldous",
+      "subdir": "portraits"
+    },
+    {
+      "id": "B1_taverna",
+      "file": "B1_taverna.jpeg",
+      "mode": "background",
+      "group": "sfondi",
+      "subdir": "backgrounds"
+    },
+    {
+      "id": "B2_stanza_aldous",
+      "file": "B2_stanza_aldous.jpeg",
+      "mode": "background",
+      "group": "sfondi",
+      "subdir": "backgrounds"
+    },
+    {
+      "id": "B3_sanctum",
+      "file": "B3_sanctum.jpeg",
+      "mode": "background",
+      "group": "sfondi",
+      "subdir": "backgrounds"
+    },
+    {
+      "id": "E1_calice",
+      "file": "E1_calice.jpeg",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues"
+    },
+    {
+      "id": "E2_anello",
+      "file": "E2_anello.jpeg",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues"
+    },
+    {
+      "id": "E3_chiave",
+      "file": "E3_chiave.jpeg",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues"
+    },
+    {
+      "id": "U4_pannello_dialogo",
+      "file": "U4_pannello_dialogo.jpeg",
+      "mode": "ui",
+      "group": "ui",
+      "subdir": "ui",
+      "size": [
+        48,
+        48
+      ],
+      "nine_slice": true
+    },
+    {
+      "id": "U5_inchiostro_corrotto",
+      "file": "U5_inchiostro_corrotto.jpeg",
+      "mode": "item",
+      "group": "ui",
+      "subdir": "ui",
+      "size": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "U6_cornice_patto",
+      "file": "U6_cornice_patto.jpeg",
+      "mode": "ui",
+      "group": "ui",
+      "subdir": "ui",
+      "size": [
+        64,
+        64
+      ],
+      "nine_slice": true
+    },
+    {
+      "id": "R15_orla_neutra",
+      "file": "R15_orla_neutra.png",
+      "mode": "portrait",
+      "group": "orla",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R16_orla_sdegnata",
+      "file": "R16_orla_sdegnata.png",
+      "mode": "portrait",
+      "group": "orla",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R17_orla_colpita",
+      "file": "R17_orla_colpita.png",
+      "mode": "portrait",
+      "group": "orla",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R18_orla_arresa",
+      "file": "R18_orla_arresa.png",
+      "mode": "portrait",
+      "group": "orla",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R19_dorn_neutro",
+      "file": "R19_dorn_neutro.png",
+      "mode": "portrait",
+      "group": "dorn",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R20_dorn_nervoso",
+      "file": "R20_dorn_nervoso.png",
+      "mode": "portrait",
+      "group": "dorn",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R21_dorn_colpito",
+      "file": "R21_dorn_colpito.png",
+      "mode": "portrait",
+      "group": "dorn",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R22_dorn_arreso",
+      "file": "R22_dorn_arreso.png",
+      "mode": "portrait",
+      "group": "dorn",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R23_nell_spaventata",
+      "file": "R23_nell_spaventata.png",
+      "mode": "portrait",
+      "group": "nell",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R24_nell_sollevata",
+      "file": "R24_nell_sollevata.png",
+      "mode": "portrait",
+      "group": "nell",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "R25_vey",
+      "file": "R25_vey.png",
+      "mode": "portrait",
+      "group": "vey",
+      "subdir": "portraits/case02",
+      "case": "case_02"
+    },
+    {
+      "id": "B4_moli",
+      "file": "B4_moli.png",
+      "mode": "background",
+      "group": "sfondi",
+      "subdir": "backgrounds",
+      "case": "case_02"
+    },
+    {
+      "id": "B5_stiva",
+      "file": "B5_stiva.png",
+      "mode": "background",
+      "group": "sfondi",
+      "subdir": "backgrounds",
+      "case": "case_02"
+    },
+    {
+      "id": "E4_cristalli",
+      "file": "E4_cristalli.png",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues",
+      "case": "case_02"
+    },
+    {
+      "id": "E5_gaffa",
+      "file": "E5_gaffa.png",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues",
+      "case": "case_02"
+    },
+    {
+      "id": "E6_lettera",
+      "file": "E6_lettera.png",
+      "mode": "item",
+      "group": "prove",
+      "subdir": "clues",
+      "case": "case_02"
+    }
+  ],
+  "avoid_by_mode": {
+    "portrait": [
+      "9c1d22",
+      "cc3a2e"
+    ],
+    "_nota": "i due rossi accesi trasformano in 'scottature' le ombre arancio di Gemini sulla pelle"
+  }
+}

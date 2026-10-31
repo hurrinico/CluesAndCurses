@@ -1,0 +1,305 @@
+{
+  "case_id": "case_02",
+  "title": "Sangue di Pietra sui Moli",
+  "case_number": 2,
+  "requires_case": "case_01",
+  "district": "Distretto Portuale",
+  "location": "I Moli di Oakhaven",
+  "briefing_text": "Il Capitano Brannoc Vey è stato ripescato all'alba sotto il pontile. Per la Guardia Portuale è un ubriaco caduto in acqua.",
+  "start_background": "moli",
+  "suspects": [
+    { "suspect_id": "orla", "name": "Orla della Gilda" },
+    { "suspect_id": "dorn", "name": "Sergente Dorn" },
+    { "suspect_id": "nell", "name": "Nell la Mozza" }
+  ],
+  "puzzles": [
+    {
+      "puzzle_id": "clue_salt_barrel",
+      "type": "picross",
+      "puzzle_title": "Il barile forzato",
+      "grid_size": { "rows": 10, "cols": 10 },
+      "max_hp": 3,
+      "solution_matrix": [
+        [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 1, 0, 0, 1, 0],
+        [0, 1, 0, 1, 1, 1, 0, 1, 1, 1],
+        [0, 1, 0, 0, 1, 0, 0, 1, 1, 1],
+        [1, 1, 1, 0, 1, 0, 1, 0, 1, 0],
+        [1, 1, 1, 0, 1, 0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 1, 1, 0, 1, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      ],
+      "fog": { "rows": [7], "cols": [4] },
+      "reward_clue": {
+        "clue_id": "item_polvere",
+        "unidentified_name": "Cristalli nel sale",
+        "name": "Polvere di Sangue di Pietra",
+        "description": "Cristalli rossi nascosti nei barili di sale della Vedova Grigia. Sostanza proibita in tutta Oakhaven.",
+        "tags": ["Polvere_Sangue_Pietra"],
+        "sprite_path": "res://assets/clues/E4_cristalli.png"
+      }
+    },
+    {
+      "puzzle_id": "clue_gaff",
+      "type": "arrows",
+      "puzzle_title": "Sotto il pontile",
+      "grid_size": { "rows": 7, "cols": 7 },
+      "max_hp": 3,
+      "lines": [
+        { "cells": [[6, 4], [6, 3], [5, 3], [5, 4]] },
+        { "cells": [[6, 5], [6, 6], [5, 6], [4, 6]] },
+        { "cells": [[0, 3], [0, 4], [0, 5]] },
+        { "cells": [[2, 0], [3, 0], [4, 0], [4, 1]] },
+        { "cells": [[2, 2], [3, 2]] },
+        { "cells": [[1, 1], [1, 2], [1, 3], [2, 3]] },
+        { "cells": [[3, 3], [3, 4], [3, 5]] },
+        { "cells": [[0, 1], [0, 2]] },
+        { "cells": [[3, 1], [2, 1]] },
+        { "cells": [[2, 5], [1, 5]] },
+        { "cells": [[5, 2], [6, 2], [6, 1], [6, 0]] },
+        { "cells": [[4, 5], [5, 5]] },
+        { "cells": [[5, 0], [5, 1]] },
+        { "cells": [[4, 3], [4, 4]] },
+        { "cells": [[1, 4], [2, 4]] },
+        { "cells": [[1, 6], [0, 6]] },
+        { "cells": [[0, 0], [1, 0]] },
+        { "cells": [[3, 6], [2, 6]] }
+      ],
+      "reward_clue": {
+        "clue_id": "item_gaffa",
+        "unidentified_name": "Ferro tra i pali",
+        "name": "Gaffa della Guardia",
+        "description": "Gaffa da ormeggio con il marchio della Guardia Portuale sul manico e sangue sul gancio.",
+        "tags": ["Gaffa_Guardia"],
+        "sprite_path": "res://assets/clues/E5_gaffa.png"
+      }
+    },
+    {
+      "puzzle_id": "clue_letter",
+      "type": "picross",
+      "puzzle_title": "Lo stivale sotto la branda",
+      "grid_size": { "rows": 10, "cols": 10 },
+      "max_hp": 3,
+      "solution_matrix": [
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
+        [1, 0, 1, 1, 0, 0, 1, 1, 0, 1],
+        [1, 0, 0, 1, 1, 1, 1, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 1, 1, 1, 1, 0, 0, 1],
+        [1, 0, 0, 1, 1, 1, 1, 0, 0, 1],
+        [1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      ],
+      "fog": { "rows": [4, 2], "cols": [8, 5] },
+      "reward_clue": {
+        "clue_id": "item_lettera",
+        "unidentified_name": "Carta piegata e sigillata",
+        "name": "Lettera del Consiglio",
+        "description": "«Il carico per il Consigliere Varro parte giovedì. Nessun altro deve sapere.» Sigillo del Consiglio cittadino, firmata D.",
+        "tags": ["Lettera_Consiglio"],
+        "sprite_path": "res://assets/clues/E6_lettera.png"
+      }
+    }
+  ],
+  "interrogation_phases": [
+    {
+      "phase_id": "fase_1_orla",
+      "type": "contradiction",
+      "suspect_id": "orla",
+      "statement": "La Gilda pesca aringhe, Inquisitore. Su questi moli non sbarca niente che non puzzi di pesce.",
+      "target_tag": "Polvere_Sangue_Pietra",
+      "success_dialogue": "Va bene... scarichiamo i barili del Capitano, e qualche pugno di polvere resta ai miei. Con quella si regge un doppio turno al gelo. Ma Vey ci pagava: perché avremmo dovuto ucciderlo?",
+      "damaged_dialogue": "Cristalli rossi? Sarà ruggine di qualche botte... E va bene. Scarichiamo i suoi barili e un po' di polvere resta a noi. Ma Vey ci pagava: perché ucciderlo?",
+      "failure_dialogue": "Non so cosa vogliate dimostrare con questo. La Gilda non c'entra.",
+      "statement_mood": "scornful",
+      "success_mood": "hit",
+      "failure_mood": "scornful"
+    },
+    {
+      "phase_id": "fase_2_dorn",
+      "type": "contradiction",
+      "suspect_id": "dorn",
+      "statement": "La Guardia ha ripescato il Capitano all'alba. Era ubriaco fradicio ed è caduto dal pontile: nessuno lo ha toccato.",
+      "target_tag": "Gaffa_Guardia",
+      "success_dialogue": "Quella gaffa è della Guardia, sì... Ero sul molo per un controllo e l'ho visto finire in acqua. Ma ad aggredirlo sono stati gli uomini della Gilda!",
+      "damaged_dialogue": "Una gaffa arrugginita? Sul porto ce ne sono cento... Sì, il marchio è il nostro. Ero sul molo per un controllo, ma ad aggredirlo sono stati quelli della Gilda!",
+      "failure_dialogue": "Questo non prova nulla. Il Capitano è caduto da solo.",
+      "statement_mood": "neutral",
+      "success_mood": "hit",
+      "failure_mood": "nervous"
+    },
+    {
+      "phase_id": "fase_3_nell",
+      "type": "testimony",
+      "suspect_id": "nell",
+      "requires_phases": ["fase_2_dorn"],
+      "statement": "Io dormivo sotto coperta, signore. Ho sentito delle voci, poi un tonfo. Non ho visto niente, lo giuro.",
+      "question": "Di chi erano le voci?",
+      "testimony_dialogue": "Del Capitano e del sergente Dorn. Il sergente voleva una lettera, il Capitano diceva che l'avrebbe portata all'Inquisizione. Poi il tonfo.",
+      "testimony_summary": "Nell ha sentito Dorn pretendere una lettera dal Capitano, poi un tonfo.",
+      "grants_tag": "Testimonianza_Nell",
+      "statement_mood": "scared",
+      "success_mood": "relieved"
+    },
+    {
+      "phase_id": "fase_4_accusa",
+      "type": "accusation",
+      "requires_phases": ["fase_1_orla", "fase_2_dorn", "fase_3_nell"],
+      "prompt": "Chi ha ucciso il Capitano Vey?",
+      "culprit_id": "dorn",
+      "required_tags": ["Gaffa_Guardia", "Lettera_Consiglio", "Testimonianza_Nell"],
+      "allow_retry": true,
+      "success_dialogue": "Il Capitano voleva consegnare all'Inquisizione la lettera del Consiglio. Tu l'hai colpito con la gaffa della Guardia e l'hai gettato in acqua per fingere un incidente. Sei tu l'assassino, Dorn.",
+      "wrong_accusation_dialogue": "Con questo non arriverete lontano, Inquisitore. I fatti dicono altro.",
+      "accuser_mood": "accuse"
+    }
+  ],
+  "final_choice": {
+    "intro": [
+      { "who": "narrator", "text": "Nella stiva della Vedova Grigia restano trenta barili di Polvere di Sangue di Pietra.", "bg": "stiva" },
+      { "who": "alaric", "mood": "focused", "text": "La legge mi dice cosa fare. Oakhaven, forse, mi direbbe altro." }
+    ],
+    "prompt": "Cosa farà l'Inquisitore della Polvere?",
+    "options": [
+      {
+        "choice": "dogma",
+        "delta": 2,
+        "label": "Confiscare la Polvere",
+        "description": "Arresti per i contrabbandieri, le guardie della Cattedrale prendono i moli.",
+        "result": [
+          { "who": "alaric", "mood": "neutral", "text": "La legge vale per tutti. La polvere va alla Cattedrale, i contrabbandieri in cella." },
+          { "who": "narrator", "text": "Da domani i moli saranno sorvegliati dalle guardie della Cattedrale." }
+        ]
+      },
+      {
+        "choice": "revolution",
+        "delta": 0,
+        "label": "Lasciarla alla Gilda",
+        "description": "I pescatori ti saranno grati. La Guardia Portuale non dimenticherà.",
+        "result": [
+          { "who": "orla", "mood": "hit", "text": "Non lo dimenticheremo, Inquisitore. Al porto avrete sempre un amico." },
+          { "who": "narrator", "text": "La Gilda ti considera un alleato. La Guardia Portuale, un nemico." }
+        ]
+      },
+      {
+        "choice": "darkness",
+        "delta": -3,
+        "label": "Assorbirla nell'Inchiostro",
+        "description": "Un potere proibito per le tue indagini. Il sigillo dell'Inquisizione ne porterà il segno.",
+        "result": [
+          { "who": "alaric", "mood": "focused", "text": "Il sangue di pietra canta nell'inchiostro... Nessuno deve saperlo." },
+          { "who": "narrator", "text": "L'inchiostro nel calamaio dell'Inquisitore ora ha riflessi rossi." }
+        ]
+      }
+    ]
+  },
+  "backgrounds": {
+    "moli": "res://assets/backgrounds/B4_moli.png",
+    "stiva": "res://assets/backgrounds/B5_stiva.png",
+    "sanctum": "res://assets/backgrounds/B3_sanctum.png"
+  },
+  "characters": {
+    "alaric": {
+      "name": "Inquisitore Alaric",
+      "portraits": {
+        "neutral": "res://assets/portraits/R01_alaric_neutro.png",
+        "focused": "res://assets/portraits/R02_alaric_concentrato.png",
+        "accuse": "res://assets/portraits/R03_alaric_accusa.png"
+      }
+    },
+    "orla": {
+      "name": "Orla, Maestra della Gilda",
+      "portraits": {
+        "neutral": "res://assets/portraits/case02/R15_orla_neutra.png",
+        "scornful": "res://assets/portraits/case02/R16_orla_sdegnata.png",
+        "hit": "res://assets/portraits/case02/R17_orla_colpita.png",
+        "surrender": "res://assets/portraits/case02/R18_orla_arresa.png"
+      }
+    },
+    "dorn": {
+      "name": "Sergente Dorn",
+      "portraits": {
+        "neutral": "res://assets/portraits/case02/R19_dorn_neutro.png",
+        "nervous": "res://assets/portraits/case02/R20_dorn_nervoso.png",
+        "hit": "res://assets/portraits/case02/R21_dorn_colpito.png",
+        "surrender": "res://assets/portraits/case02/R22_dorn_arreso.png"
+      }
+    },
+    "nell": {
+      "name": "Nell la Mozza",
+      "portraits": {
+        "neutral": "res://assets/portraits/case02/R23_nell_spaventata.png",
+        "scared": "res://assets/portraits/case02/R23_nell_spaventata.png",
+        "relieved": "res://assets/portraits/case02/R24_nell_sollevata.png"
+      }
+    },
+    "vey": {
+      "name": "Capitano Brannoc Vey",
+      "portraits": {
+        "neutral": "res://assets/portraits/case02/R25_vey.png"
+      }
+    }
+  },
+  "story": {
+    "intro": [
+      { "who": "narrator", "text": "Distretto Portuale. La nebbia sale dall'acqua così fitta che le lanterne sembrano annegare.", "bg": "moli" },
+      { "who": "vey", "mood": "neutral", "name": "La vittima", "text": "Capitano Brannoc Vey, della Vedova Grigia. Ripescato all'alba sotto il pontile. Per la Guardia Portuale, un ubriaco caduto in acqua." },
+      { "who": "dorn", "mood": "neutral", "text": "Inquisitore, non c'era bisogno di scomodarvi. Il Capitano beveva, il pontile è scivoloso. Caso chiuso." },
+      { "who": "alaric", "mood": "focused", "text": "Un annegato ha acqua nei polmoni e schiuma alla bocca. Vey non ha né l'una né l'altra. Ha invece una ferita sulla tempia." },
+      { "who": "alaric", "mood": "neutral", "text": "Era già morto quando ha toccato l'acqua. Comincerò dalla sua nave." }
+    ],
+    "before_puzzle": {
+      "clue_salt_barrel": [
+        { "who": "narrator", "text": "Nella stiva della Vedova Grigia, decine di barili di sale. Uno ha il coperchio forzato.", "bg": "stiva" },
+        { "who": "narrator", "text": "Nebbia Arcanica: il fumo nasconde alcuni numeri guida (?). Ogni riga completata dirada una colonna, ogni colonna completata dirada una riga." }
+      ],
+      "clue_gaff": [
+        { "who": "narrator", "text": "Sotto il pontile, tra i pali, qualcosa di metallico è incastrato in un groviglio di cime e reti.", "bg": "moli" },
+        { "who": "narrator", "text": "Tocca una cima per sfilarla nella direzione della punta. Se qualcosa la blocca, torna indietro." }
+      ],
+      "clue_letter": [
+        { "who": "narrator", "text": "Nella cabina del Capitano qualcuno ha già frugato. Ma non nello stivale di ricambio sotto la branda.", "bg": "stiva" }
+      ]
+    },
+    "after_puzzle": {
+      "clue_salt_barrel": [
+        { "who": "alaric", "mood": "focused", "text": "Polvere di Sangue di Pietra. Chi la respira lavora tre giorni senza dormire, poi si spegne come una candela." },
+        { "who": "alaric", "mood": "neutral", "text": "Vey non trasportava sale." }
+      ],
+      "clue_gaff": [
+        { "who": "alaric", "mood": "focused", "text": "Una gaffa da ormeggio con il marchio della Guardia Portuale inciso sul manico. E sangue sul gancio." }
+      ],
+      "clue_letter": [
+        { "who": "alaric", "mood": "neutral", "text": "Il sigillo del Consiglio cittadino. «Il carico per il Consigliere Varro parte giovedì. Nessun altro deve sapere.»" },
+        { "who": "alaric", "mood": "focused", "text": "Firmata con una sola lettera: D." }
+      ]
+    },
+    "before_interrogations": [
+      { "who": "alaric", "mood": "neutral", "text": "Polvere, gaffa e lettera. Ora sentiamo chi lavora su questi moli.", "bg": "moli" }
+    ],
+    "after_phase": {
+      "fase_1_orla": [
+        { "who": "orla", "mood": "neutral", "text": "Vey era un contrabbandiere, ma pagava giusto. L'ultima sera litigava con qualcuno sul pontile. Uno con la divisa." }
+      ],
+      "fase_2_dorn": [
+        { "who": "alaric", "mood": "focused", "text": "E questa lettera firmata D., sergente? Il sigillo del Consiglio non finisce per caso nello stivale di un capitano." },
+        { "who": "dorn", "mood": "nervous", "text": "Non so leggere, Inquisitore! Chiedete alla mozza, era a bordo!" }
+      ],
+      "fase_3_nell": [
+        { "who": "alaric", "mood": "neutral", "text": "Hai fatto bene a parlare, Nell. Nessuno ti toccherà." }
+      ]
+    },
+    "after_accusation": [
+      { "who": "dorn", "mood": "surrender", "text": "Il Consigliere Varro paga meglio della Corona. Vey voleva rovinare tutti... me compreso." },
+      { "who": "alaric", "mood": "neutral", "text": "Varro. Un nome che terrò a mente." }
+    ],
+    "epilogue": [
+      { "who": "narrator", "text": "Dorn viene consegnato alle prigioni della Cattedrale. Quella stessa notte, il Consigliere Varro lascia la città.", "bg": "sanctum" },
+      { "who": "alaric", "mood": "neutral", "text": "La nebbia dei moli si è diradata. Quella del Consiglio ha appena cominciato a salire." }
+    ]
+  }
+}

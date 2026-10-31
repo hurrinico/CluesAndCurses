@@ -1,0 +1,36 @@
+GIMP Palette
+Name: Clues & Curses
+Columns: 8
+#
+ 11  10  18	Notte #0b0a12
+ 20  18  31	Notte #14121f
+ 28  27  46	Notte #1c1b2e
+ 38  38  64	Notte #262640
+ 49  53  82	Notte #313552
+ 63  72 102	Notte #3f4866
+ 86  96 126	Notte #56607e
+122 131 160	Notte #7a83a0
+ 31  20  16	Legno #1f1410
+ 51  32  26	Legno #33201a
+ 74  46  33	Legno #4a2e21
+102  65  43	Legno #66412b
+133  89  58	Legno #85593a
+168 119  79	Legno #a8774f
+194 128  58	Fiamma #c2803a
+219 160  74	Fiamma #dba04a
+240 192  96	Fiamma #f0c060
+255 224 138	Fiamma #ffe08a
+255 244 204	Fiamma #fff4cc
+ 61  12  17	Sangue #3d0c11
+107  18  25	Sangue #6b1219
+156  29  34	Sangue #9c1d22
+204  58  46	Sangue #cc3a2e
+ 58  29  74	Arcano #3a1d4a
+107  47 122	Arcano #6b2f7a
+160  80 176	Arcano #a050b0
+ 31  61  42	Veleno #1f3d2a
+ 63 122  58	Veleno #3f7a3a
+140 207  78	Veleno #8ccf4e
+122  74  58	Pelle #7a4a3a
+184 122  94	Pelle #b87a5e
+224 173 138	Pelle #e0ad8a

@@ -1,0 +1,39 @@
+; Clues & Curses (C&C) - progetto Godot 4.3
+
+config_version=5
+
+[application]
+
+config/name="Clues & Curses"
+run/main_scene="res://scenes/TitleScreen.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://assets/ui/app_icon_256.png"
+
+[autoload]
+
+SaveManager="*res://scripts/SaveManager.gd"
+AuthService="*res://scripts/AuthService.gd"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=640
+window/size/window_width_override=450
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/PixelifySans-Regular.ttf"
+theme/default_font_antialiasing=0

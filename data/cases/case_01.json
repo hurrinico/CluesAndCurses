@@ -1,0 +1,257 @@
+{
+  "case_id": "case_01",
+  "title": "L'Ultimo Calice di Mastro Aldous",
+  "case_number": 1,
+  "district": "Distretto Mercantile",
+  "location": "Taverna del Cinghiale d'Argento",
+  "briefing_text": "Mastro Aldous è stato trovato morto nella sua stanza privata. La porta era chiusa dall'interno, ma l'Inquisitore avverte odore di alchimia e tracce nascoste.",
+  "suspects": [
+    { "suspect_id": "garrett", "name": "Garrett il Locandiere" },
+    { "suspect_id": "lyra", "name": "Lady Lyra" },
+    { "suspect_id": "kaelen", "name": "Kaelen il Garzone" }
+  ],
+  "puzzles": [
+    {
+      "puzzle_id": "clue_poison_glass",
+      "type": "picross",
+      "puzzle_title": "Il bordo del calice",
+      "grid_size": { "rows": 5, "cols": 5 },
+      "max_hp": 3,
+      "solution_matrix": [
+        [0, 1, 1, 1, 0],
+        [1, 0, 1, 0, 1],
+        [1, 1, 1, 1, 1],
+        [0, 1, 0, 1, 0],
+        [0, 0, 1, 0, 0]
+      ],
+      "reward_clue": {
+        "clue_id": "item_veleno",
+        "unidentified_name": "Residuo sul calice",
+        "name": "Simbolo di Morte Selvatica",
+        "description": "Una traccia alchemica che provoca paralisi istantanea al primo sorso.",
+        "tags": ["Veleno_Morte_Selvatica"],
+        "sprite_path": "res://assets/clues/E1_calice.png"
+      }
+    },
+    {
+      "puzzle_id": "clue_ring_seal",
+      "type": "rune_sudoku",
+      "puzzle_title": "Sotto il tavolo",
+      "size": 4,
+      "box": [2, 2],
+      "runes": ["ansuz", "fehu", "isa", "othala"],
+      "max_hp": 3,
+      "solution": [
+        [0, 1, 2, 3],
+        [2, 3, 0, 1],
+        [1, 0, 3, 2],
+        [3, 2, 1, 0]
+      ],
+      "givens": [
+        [0, -1, -1, 3],
+        [-1, 3, -1, -1],
+        [1, 0, -1, -1],
+        [-1, -1, -1, 0]
+      ],
+      "reward_clue": {
+        "clue_id": "item_sigillo",
+        "unidentified_name": "Oggetto metallico circolare",
+        "name": "Sigillo della Casata Lyra",
+        "description": "Anello con sigillo nobiliare, rinvenuto sotto il tavolo della vittima.",
+        "tags": ["Sigillo_Lyra"],
+        "sprite_path": "res://assets/clues/E2_anello.png"
+      }
+    },
+    {
+      "puzzle_id": "clue_master_key",
+      "type": "picross",
+      "puzzle_title": "Nel mantello del locandiere",
+      "grid_size": { "rows": 10, "cols": 10 },
+      "max_hp": 3,
+      "solution_matrix": [
+        [0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 1, 1, 0, 0, 0, 0, 0],
+        [1, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+        [1, 1, 0, 1, 1, 0, 0, 1, 0, 1],
+        [0, 1, 1, 1, 0, 0, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+      ],
+      "reward_clue": {
+        "clue_id": "item_chiave",
+        "unidentified_name": "Oggetto di ferro macchiato",
+        "name": "La Chiave Insanguinata",
+        "description": "La chiave maestra della taverna, macchiata di sangue. Apre ogni stanza, anche quelle chiuse dall'interno.",
+        "tags": ["Chiave_Maestra_Garrett"],
+        "sprite_path": "res://assets/clues/E3_chiave.png"
+      }
+    }
+  ],
+  "interrogation_phases": [
+    {
+      "phase_id": "fase_1_lyra",
+      "type": "contradiction",
+      "suspect_id": "lyra",
+      "statement": "Io e Aldous non avevamo alcun rapporto. Sono venuta qui solo per bere un idromele e non mi sono mai avvicinata al suo tavolo per tutta la serata!",
+      "target_tag": "Sigillo_Lyra",
+      "success_dialogue": "Quel sigillo... va bene, gli ho portato una rata del mio debito. Ma quando me ne sono andata era vivo e vegeto!",
+      "damaged_dialogue": "Un anello graffiato e mezzo illeggibile? Potrebbe essere di qualunque nobile di Oakhaven... E va bene, è il mio. Gli ho portato una rata del debito, ma quando me ne sono andata era vivo!",
+      "failure_dialogue": "Non so di cosa parli, Inquisitore. Non ho mai toccato quel tavolo.",
+      "statement_mood": "scornful",
+      "success_mood": "hit",
+      "failure_mood": "scornful"
+    },
+    {
+      "phase_id": "fase_2_garrett",
+      "type": "contradiction",
+      "suspect_id": "garrett",
+      "statement": "Mastro Aldous si è chiuso a chiave dall'interno alle 21:00. La stanza era sigillata: nessuno è entrato dopo di allora!",
+      "target_tag": "Chiave_Maestra_Garrett",
+      "success_dialogue": "Va bene... sono entrato con la chiave maestra per prendere le cambiali, ma il mercante era già steso a terra! Non l'ho ucciso io!",
+      "damaged_dialogue": "Una chiave arrugginita? In questa taverna ce ne sono a decine... Basta, d'accordo. È la mia chiave maestra. Sono entrato per le cambiali, ma il mercante era già a terra! Non l'ho ucciso io!",
+      "failure_dialogue": "La porta era serrata, vi dico la verità!",
+      "statement_mood": "neutral",
+      "success_mood": "hit",
+      "failure_mood": "nervous"
+    },
+    {
+      "phase_id": "fase_3_kaelen",
+      "type": "testimony",
+      "suspect_id": "kaelen",
+      "requires_phases": ["fase_2_garrett"],
+      "statement": "Io... io ho solo portato il vino su in camera, come ogni sera. Il calice era già pronto sul bancone.",
+      "question": "Chi ha preparato il calice?",
+      "testimony_dialogue": "Il padrone. Garrett lo ha versato e mi ha detto di portarlo subito al signor Aldous. Nessun altro ha toccato quel bancone.",
+      "grants_tag": "Testimonianza_Kaelen",
+      "statement_mood": "scared",
+      "success_mood": "relieved",
+      "failure_mood": "scared"
+    },
+    {
+      "phase_id": "fase_4_accusa",
+      "type": "accusation",
+      "requires_phases": ["fase_1_lyra", "fase_2_garrett", "fase_3_kaelen"],
+      "prompt": "Chi ha avvelenato Mastro Aldous?",
+      "culprit_id": "garrett",
+      "required_tags": ["Veleno_Morte_Selvatica", "Chiave_Maestra_Garrett", "Testimonianza_Kaelen"],
+      "allow_retry": true,
+      "success_dialogue": "Il veleno uccide al primo sorso. Il vino lo hai versato tu, e il ragazzo l'ha portato senza sapere nulla. Poi sei tornato con la chiave maestra per le cambiali. Sei tu l'assassino, Garrett.",
+      "wrong_accusation_dialogue": "I fatti non reggono, Inquisitore. Riesamina le prove.",
+      "accuser_mood": "accuse"
+    }
+  ],
+  "backgrounds": {
+    "stanza": "res://assets/backgrounds/B2_stanza_aldous.png",
+    "taverna": "res://assets/backgrounds/B1_taverna.png",
+    "sanctum": "res://assets/backgrounds/B3_sanctum.png"
+  },
+  "characters": {
+    "alaric": {
+      "name": "Inquisitore Alaric",
+      "portraits": {
+        "neutral": "res://assets/portraits/R01_alaric_neutro.png",
+        "focused": "res://assets/portraits/R02_alaric_concentrato.png",
+        "accuse": "res://assets/portraits/R03_alaric_accusa.png"
+      }
+    },
+    "garrett": {
+      "name": "Garrett il Locandiere",
+      "portraits": {
+        "neutral": "res://assets/portraits/R04_garrett_neutro.png",
+        "nervous": "res://assets/portraits/R05_garrett_nervoso.png",
+        "hit": "res://assets/portraits/R06_garrett_colpito.png",
+        "surrender": "res://assets/portraits/R07_garrett_arreso.png"
+      }
+    },
+    "lyra": {
+      "name": "Lady Lyra",
+      "portraits": {
+        "neutral": "res://assets/portraits/R08_lyra_neutra.png",
+        "scornful": "res://assets/portraits/R09_lyra_sdegnata.png",
+        "hit": "res://assets/portraits/R10_lyra_colpita.png",
+        "surrender": "res://assets/portraits/R11_lyra_arresa.png"
+      }
+    },
+    "kaelen": {
+      "name": "Kaelen il Garzone",
+      "portraits": {
+        "neutral": "res://assets/portraits/R12b_kaelen_spaventato_variante.png",
+        "scared": "res://assets/portraits/R12_kaelen_spaventato.png",
+        "relieved": "res://assets/portraits/R13_kaelen_sollevato.png"
+      }
+    },
+    "aldous": {
+      "name": "Mastro Aldous",
+      "portraits": {
+        "neutral": "res://assets/portraits/R14_aldous.png"
+      }
+    }
+  },
+  "story": {
+    "intro": [
+      { "who": "narrator", "text": "Oakhaven, Distretto Mercantile. Piove da tre giorni, e stanotte la pioggia non lava via niente.", "bg": "stanza" },
+      { "who": "aldous", "mood": "neutral", "name": "La vittima", "text": "Mastro Aldous, mercante di spezie. Ricco, avido, con un registro pieno di debitori. Trovato morto nella sua stanza alla Taverna del Cinghiale d'Argento." },
+      { "who": "narrator", "text": "La porta era chiusa a chiave dall'interno. Nessuno è entrato, nessuno è uscito." },
+      { "who": "alaric", "mood": "focused", "text": "Nessuna ferita, nessun segno di lotta. Eppure l'aria sa di alchimia." },
+      { "who": "alaric", "mood": "focused", "text": "E la cenere del focolare è stata smossa. Qualcuno ha nascosto qualcosa dietro le travi." }
+    ],
+    "before_puzzle": {
+      "clue_poison_glass": [
+        { "who": "narrator", "text": "Tra la cenere c'è un calice. Sul bordo, una macchia che la luce della candela non riesce a leggere." },
+        { "who": "narrator", "text": "Risolvi il Picross per far emergere la traccia. I numeri indicano i gruppi di caselle piene in ogni riga e colonna." }
+      ],
+      "clue_ring_seal": [
+        { "who": "narrator", "text": "Nella sala comune, il tavolo dove Aldous ha cenato è ancora apparecchiato.", "bg": "taverna" },
+        { "who": "alaric", "mood": "focused", "text": "Qualcosa è rotolato tra le assi del pavimento. Metallo, e piccolo." },
+        { "who": "alaric", "mood": "focused", "text": "Un anello con sigillo. Le rune della casata sono quasi cancellate." },
+        { "who": "narrator", "text": "Ricomponi il sigillo. Ogni runa compare una sola volta in ogni riga, in ogni colonna e in ogni riquadro." }
+      ],
+      "clue_master_key": [
+        { "who": "garrett", "mood": "neutral", "text": "Inquisitore, la mia taverna è a vostra disposizione. Ditemi solo quando potrò riaprire." },
+        { "who": "alaric", "mood": "focused", "text": "Presto, Garrett. Prima vorrei vedere il mantello appeso dietro il bancone." },
+        { "who": "garrett", "mood": "nervous", "text": "Il mio mantello? È solo bagnato di pioggia, signore." },
+        { "who": "narrator", "text": "Questa griglia è più grande. Parti dalle righe e colonne con i numeri più alti." }
+      ]
+    },
+    "after_puzzle": {
+      "clue_poison_glass": [
+        { "who": "alaric", "mood": "focused", "text": "Morte Selvatica. Paralizza al primo sorso." },
+        { "who": "alaric", "mood": "neutral", "text": "Aldous è morto appena ha bevuto. Il veleno era nel vino prima ancora che entrasse in questa stanza." }
+      ],
+      "clue_ring_seal": [
+        { "who": "alaric", "mood": "neutral", "text": "Il sigillo della casata di Lady Lyra. Qualcuno, stanotte, si è seduto molto vicino ad Aldous." }
+      ],
+      "clue_master_key": [
+        { "who": "alaric", "mood": "neutral", "text": "La chiave maestra della taverna, sporca di sangue. Apre ogni stanza, anche quelle chiuse dall'interno." }
+      ]
+    },
+    "before_interrogations": [
+      { "who": "alaric", "mood": "neutral", "text": "Ho tre prove e tre persone con una storia da raccontare. Sentiamole.", "bg": "taverna" },
+      { "who": "narrator", "text": "Quando una dichiarazione è smentita da una prova, apri il fascicolo e presentala. Se sbagli prova puoi riprovare." }
+    ],
+    "after_phase": {
+      "fase_1_lyra": [
+        { "who": "lyra", "mood": "surrender", "text": "Sì, ero al suo tavolo. Ma non l'avrei mai ucciso: con lui morto, il mio debito passa ai suoi eredi." },
+        { "who": "alaric", "mood": "neutral", "text": "Un debito non è un omicidio, Lady Lyra. Per ora potete restare seduta." }
+      ],
+      "fase_2_garrett": [
+        { "who": "alaric", "mood": "focused", "text": "E il calice nascosto nel focolare? Anche quello era già lì quando siete entrato?" },
+        { "who": "garrett", "mood": "nervous", "text": "Non so niente di nessun calice! Chiedete al ragazzo, è lui che porta il vino!" }
+      ],
+      "fase_3_kaelen": [
+        { "who": "alaric", "mood": "neutral", "text": "Grazie, Kaelen. Hai fatto la cosa giusta." }
+      ]
+    },
+    "after_accusation": [
+      { "who": "garrett", "mood": "surrender", "text": "Aldous voleva pignorarmi la taverna. Vent'anni di lavoro, cancellati con una firma." },
+      { "who": "alaric", "mood": "neutral", "text": "E così hai preso il veleno per i topi dai sotterranei. Il resto l'ha fatto un ragazzo che si fidava di te." }
+    ],
+    "epilogue": [
+      { "who": "narrator", "text": "Garrett viene condotto alle prigioni della Cattedrale. Le cambiali di Aldous tornano nel registro dell'Inquisizione.", "bg": "sanctum" },
+      { "who": "alaric", "mood": "neutral", "text": "Un calice, un anello, una chiave. A Oakhaven anche gli oggetti hanno qualcosa da confessare." }
+    ]
+  }
+}
