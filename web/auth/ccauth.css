@@ -1,0 +1,39 @@
+/* Clues & Curses - pannello di accesso sopra il gioco. Colori dalla palette Clues & Curses (tools/CluesAndCurses.hex). */
+@font-face { font-family: 'Pixelify Sans'; src: url('PixelifySans-Regular.ttf') format('truetype'); font-display: swap; }
+
+.ra-overlay { position: absolute; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom)); box-sizing: border-box;
+  background: rgba(11, 10, 18, 0.82); -webkit-user-select: text; user-select: text; touch-action: auto;
+  font: 15px/1.4 'Pixelify Sans', ui-monospace, Menlo, Consolas, monospace; color: #fff4cc; }
+.ra-box { position: relative; width: 100%; max-width: 340px; max-height: 100%; overflow-y: auto; box-sizing: border-box;
+  padding: 22px 18px 16px; background: #14121f; border: 2px solid #66412b; box-shadow: 0 0 0 2px #0b0a12, 0 12px 40px #000;
+  display: flex; flex-direction: column; gap: 10px; }
+.ra-box h2 { margin: 0 28px 0 0; font-size: 20px; font-weight: normal; color: #f0c060; letter-spacing: .5px; }
+.ra-lead { margin: 0; color: #a7aec4; font-size: 14px; }
+.ra-close { position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; border: 0; background: none;
+  color: #7a83a0; font-family: inherit; font-size: 26px; line-height: 1; cursor: pointer; }
+.ra-close:hover { color: #fff4cc; }
+.ra-form { display: flex; flex-direction: column; gap: 10px; margin: 0; }
+.ra-field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #a7aec4; }
+.ra-field input { font-family: inherit; font-size: 16px; line-height: 1.2; color: #fff4cc; background: #0b0a12; border: 2px solid #262640;
+  padding: 10px; border-radius: 0; outline: none; -webkit-appearance: none; appearance: none; }
+.ra-field input:focus { border-color: #a050b0; }
+.ra-box button { font: inherit; min-height: 44px; cursor: pointer; border-radius: 0; }
+.ra-primary { color: #0b0a12; background: #f0c060; border: 2px solid #dba04a; }
+.ra-primary:hover { background: #ffd77a; }
+.ra-secondary { color: #fff4cc; background: #262640; border: 2px solid #56607e; }
+.ra-oauth { display: flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid #56607e; }
+.ra-google { color: #1f1f1f; background: #ffffff; border-color: #dadce0; }
+.ra-apple { color: #ffffff; background: #000000; border-color: #000000; }
+.ra-sep { display: flex; align-items: center; gap: 8px; color: #56607e; font-size: 12px; }
+.ra-sep::before, .ra-sep::after { content: ''; flex: 1; border-top: 1px solid #262640; }
+.ra-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.ra-link { min-height: 44px; padding: 0; border: 0; background: none; color: #c58ad0; text-decoration: underline;
+  text-underline-offset: 3px; text-align: left; }
+.ra-danger { color: #e0705f; }
+.ra-status { margin: 0; min-height: 1.4em; font-size: 13px; color: #a7aec4; }
+.ra-status.ra-error { color: #e0705f; }
+.ra-status.ra-ok { color: #8fcf7a; }
+.ra-busy .ra-box { cursor: progress; }
+.ra-busy .ra-box button { opacity: .6; pointer-events: none; }
+.ra-box :focus-visible { outline: 2px solid #a050b0; outline-offset: 2px; }
